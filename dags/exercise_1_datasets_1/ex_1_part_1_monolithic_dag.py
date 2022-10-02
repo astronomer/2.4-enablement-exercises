@@ -9,10 +9,10 @@ import numpy as np
 API = "https://www.boredapi.com/api/activity"
 
 with DAG(
-    dag_id="ex_1_monolithic_dag",
+    dag_id="ex_1_part_1_monolithic_dag",
     start_date=datetime(2022, 10, 1),
     schedule="@daily",
-    tags=["exercise_1", "datasets", "task"],
+    tags=["exercise_1", "datasets", "task", "ex_1_part_1"],
     catchup=False
 ):
 

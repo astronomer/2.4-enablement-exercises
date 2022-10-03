@@ -18,13 +18,13 @@ Feel free to use the following resources:
 
 #### Part 1 - Break up a monolithic DAG.
 
-In `dags/exercise_1_datasets_1` you will find a DAG called `monolithic_dag` (tagged with `ex_1_part_1`) gathering weekend activities for you.
+In `dags/exercise_1_datasets` you will find a DAG called `monolithic_dag` (tagged with `ex_1_part_1`) gathering weekend activities for you.
 
 Task: Break the monolithic DAG up into 2 (or more) seperate DAGs using Datasets.
 
 #### Part 2 - Schedule a DAG on two Datasets.
 
-In `dags/exercise_1_datasets_1` you will find the following tags (tagged `ex_1_part_2`):
+In `dags/exercise_1_datasets` you will find the following tags (tagged `ex_1_part_2`):
 
 - `ex_1_part_2_fast_scheduled_producer_DAG`: A DAG scheduled every 2 minutes writing a random number to a file in an S3 Bucket.
 - `ex_1_part_2_slow_scheduled_producer_dag`: A DAG scheduled to run every 5 minutes writing your estimated age (based on your name) to a file in an S3 Bucket.
@@ -47,3 +47,9 @@ Task: Replace all ExternalTaskSensors with Datasets.
 
 
 ### Exercise 4 - Dynamic Task Mapping - kwargs
+
+In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml and txt files in an S3 bucket.
+
+Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket".
+
+Hint: a very similar use case can be found under "Transforming mapped data" section of the offical documentation.

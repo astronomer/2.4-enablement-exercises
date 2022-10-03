@@ -1,3 +1,5 @@
+"""Make this DAG into a DAG with a producing task."""
+
 from airflow import DAG, Dataset
 from airflow.providers.amazon.aws.operators.s3 import S3CreateObjectOperator
 from airflow.decorators import task

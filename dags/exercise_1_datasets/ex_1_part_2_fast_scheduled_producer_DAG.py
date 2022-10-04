@@ -10,7 +10,7 @@ import random
 S3_BUCKET = "YOUR_S3_BUCKET"
 
 with DAG(
-    dag_id="ex_1_part_2_fast_scheduled_producer_DAG",
+    dag_id="ex_1_part_2_fast_scheduled_producer_dag",
     start_date=datetime(2022, 10, 1),
     schedule="*/2 * * * *",
     tags=["exercise_1", "datasets", "task", "ex_1_part_2"],

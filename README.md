@@ -52,7 +52,7 @@ In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the othe
 
 > Task: Complete the DAGs using dynamic task mapping. 
 
-### Exercise 4 - Dynamic Task Mapping - map and kwargs
+### Exercise 4 - Dynamic Task Mapping - map and expand kwargs
 
 In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml and txt files in an S3 bucket.
 

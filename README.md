@@ -41,11 +41,13 @@ In `dags/exercise_2_datasets` there are 4 DAGs (tagged `exercise_2`):
 - `ex_2_wait_for_cats_dag`: A DAG with 1 ExternalTaskSensor that waits for a new link to a cat image to be written to the local file.
 - `ex_2_wait_for_animals_and_fetch_age_dag`: A DAG with 3 branches depending using 3 ExternalTaskSensors.
 
-Task: Replace all ExternalTaskSensors with Datasets. 
+> Task: Replace all ExternalTaskSensors with Datasets.
 
 ### Exercise 3 - Dynamic Task Mapping - expand kwargs and zip
 
-In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the other using a Dataset.)
+In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the other using a Dataset).
+
+- 
 
 ### Exercise 4 - Dynamic Task Mapping - map and kwargs
 

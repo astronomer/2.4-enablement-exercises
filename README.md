@@ -2,7 +2,7 @@
 
 ### Instructions
 
-This repository contains 4 exercises about new Airflow features in version 2.4. For some exercises a connection to AWS (`aws_conn`) with one existing S3 bucket is needed.
+This repository contains 4 exercises about new Airflow features in version 2.4. For some exercises a connection to AWS (`aws_conn`) with an S3 bucket existing is needed. Exercise 4 uses 3 seperate S3 buckets.
 
 Possible solutions are shown in the `solutions` folder, there often are several ways to solve the task.
 
@@ -50,7 +50,7 @@ In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the othe
 - `ex_3_upload_files` is an incomplete DAG which is supposed to upload all files in `include/ex_3/` to an S3 bucket using dynamic task mapping over the `LocalFilesystemToS3Operator`. 
 - `ex_3_zip_dag` is the incomplete downstream DAG reading the file names and their contents and writing a modified version of the files to `include/ex_3/solutions/`. 
 
-> Complete the DAGs using dynamic task mapping. 
+> Task: Complete the DAGs using dynamic task mapping. 
 
 ### Exercise 4 - Dynamic Task Mapping - map and kwargs
 

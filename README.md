@@ -43,13 +43,14 @@ In `dags/exercise_2_datasets` there are 4 DAGs (tagged `exercise_2`):
 
 Task: Replace all ExternalTaskSensors with Datasets. 
 
-### Exercise 3 - Dynamic Task Mapping
+### Exercise 3 - Dynamic Task Mapping - expand kwargs and zip
 
+In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the other using a Dataset.)
 
-### Exercise 4 - Dynamic Task Mapping - kwargs
+### Exercise 4 - Dynamic Task Mapping - map and kwargs
 
 In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml and txt files in an S3 bucket.
 
 Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket".
 
-Hint: a very similar use case can be found under "Transforming mapped data" section of the offical documentation.
+Hint: a very similar use case can be found in the "Transforming mapped data" section of the offical documentation.

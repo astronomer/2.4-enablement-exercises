@@ -13,7 +13,7 @@ with DAG(
     dag_id="ex_4_expand_kwargs_dag",
     start_date=datetime(2022, 10, 1),
     schedule=None,
-    tags=["exercise_4", "datasets", "task"],
+    tags=["exercise_4", "dynamic_tasks", "task"],
     catchup=False
 ):
 

@@ -41,7 +41,7 @@ In `dags/exercise_2_datasets` there are 4 DAGs (tagged `exercise_2`):
 - `ex_2_wait_for_cats_dag`: A DAG with 1 ExternalTaskSensor that waits for a new link to a cat image to be written to the local file.
 - `ex_2_wait_for_animals_and_fetch_age_dag`: A DAG with 3 branches depending using 3 ExternalTaskSensors.
 
-> Task: Replace all ExternalTaskSensors with Datasets.
+> Task: Replace all ExternalTaskSensors with Datasets. How does using Datasets change the functionality of the DAG?
 
 ### Exercise 3 - Dynamic Task Mapping - expand kwargs and zip
 
@@ -50,12 +50,12 @@ In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the othe
 - `ex_3_upload_files` is an incomplete DAG which is supposed to upload all files in `include/ex_3/` to an S3 bucket using dynamic task mapping over the `LocalFilesystemToS3Operator`. 
 - `ex_3_zip_dag` is the incomplete downstream DAG reading the file names and their contents and writing a modified version of the files to `include/ex_3/solutions/`. 
 
-> Task: Complete the DAGs using dynamic task mapping. 
+> Task: Complete the DAGs using dynamic task mapping to create one task for each combination of filename and file content.
 
 ### Exercise 4 - Dynamic Task Mapping - map and expand kwargs
 
 In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml and txt files in an S3 bucket.
 
-> Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket".
+> Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket". The goal is to have one dynamically mapped task combination of source_bucket_key and dest_bucket_key.
 
 Hint: a very similar use case can be found in the "Transforming mapped data" section of the offical documentation.

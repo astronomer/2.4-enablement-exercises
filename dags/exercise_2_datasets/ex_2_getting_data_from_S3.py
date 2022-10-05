@@ -14,6 +14,7 @@ with DAG(
     catchup=False
 ):
 
+    # this task reads from a file created in exercise 1!
     @task
     def get_my_estimated_age():
         s3_hook = S3Hook(aws_conn_id='aws_conn')

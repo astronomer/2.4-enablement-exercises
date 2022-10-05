@@ -7,29 +7,29 @@ from airflow.operators.bash import BashOperator
 import numpy as np
 
 with DAG(
-    dag_id="ex_2_wait_for_animals_and_fetch_age_dag",
+    dag_id="ex_2_wait_for_animals_and_fetch_age_dag_local",
     start_date=datetime(2022, 10, 1),
     schedule="@daily",
-    tags=["exercise_2", "datasets", "task"],
+    tags=["exercise_2", "datasets", "task", "local"],
     catchup=False
 ):
 
     # replace the external task sensors with datasets
     wait_for_dogs = ExternalTaskSensor(
         task_id="wait_for_dogs",
-        external_dag_id="ex_2_getting_animal_pictures",
+        external_dag_id="ex_2_getting_animal_pictures_local",
         external_task_id="write_dog_to_file"
     )
 
     wait_for_age_data = ExternalTaskSensor(
         task_id="wait_for_age_data",
-        external_dag_id="ex_2_getting_data_from_S3",
+        external_dag_id="ex_2_getting_data_from_local",
         external_task_id="write_age_to_local_file"
     )
 
     wait_for_cats = ExternalTaskSensor(
         task_id="wait_for_cats",
-        external_dag_id="ex_2_getting_animal_pictures",
+        external_dag_id="ex_2_getting_animal_pictures_local",
         external_task_id="write_cat_to_file"
     )
 

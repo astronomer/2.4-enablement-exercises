@@ -50,12 +50,12 @@ In `dags/exercise_3_dynamic_tasks` there are two DAGs (one scheduled on the othe
 - `ex_3_upload_files` is an incomplete DAG which is supposed to upload all files in `include/ex_3/` to an S3 bucket using dynamic task mapping over the `LocalFilesystemToS3Operator`. 
 - `ex_3_zip_dag` is the incomplete downstream DAG reading the file names and their contents and writing a modified version of the files to `include/ex_3/solutions/`. 
 
-> Task: Complete the DAGs using dynamic task mapping to create one task for each combination of filename and file content.
+> Task: Complete the DAGs using dynamic task mapping. `ex_3_upload_files` should have one mapped task for each combination of `filename` and `dest_key` and the `write_new_files` task in the `ex_3_zip_dag` should have one mapped task for each pair of `old_file_name` and `file_content`.
 
 ### Exercise 4 - Dynamic Task Mapping - map and expand kwargs
 
 In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml and txt files in an S3 bucket.
 
-> Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket". The goal is to have one dynamically mapped task combination of source_bucket_key and dest_bucket_key.
+> Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket". The goal is to have one dynamically mapped task combination of `source_bucket_key` and `dest_bucket_key`.
 
 Hint: a very similar use case can be found in the "Transforming mapped data" section of the offical documentation.

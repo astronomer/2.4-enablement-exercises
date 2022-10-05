@@ -2,7 +2,7 @@
 
 ### Instructions
 
-This repository contains 4 exercises about new Airflow features in version 2.4. For some exercises a connection to AWS (`aws_conn`) with an S3 bucket existing is needed. Exercise 4 uses 3 seperate S3 buckets. If you don't have an S3 bucket available use the dags in the folder `local` for local versions of the same concepts.
+This repository contains 4 exercises about new Airflow features in version 2.4. For some exercises a connection to AWS (`aws_conn`) with an S3 bucket existing is needed. Exercise 4 uses 3 seperate S3 buckets. If you don't have an S3 bucket available use the dags in the folder `local_versions` for local versions of the same concepts.
 
 Possible solutions are shown in the `solutions` folder, there often are several ways to solve the task.
 

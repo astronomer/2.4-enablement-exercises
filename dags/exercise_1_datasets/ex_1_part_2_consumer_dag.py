@@ -1,6 +1,6 @@
 """Schedule this DAG on Datasets."""
 
-from airflow import DAG, Dataset, XComArg
+from airflow import DAG, XComArg
 from airflow.decorators import task
 from airflow.providers.amazon.aws.operators.s3 import (
     S3CreateObjectOperator, S3ListOperator

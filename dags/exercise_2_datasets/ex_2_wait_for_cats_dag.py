@@ -1,4 +1,4 @@
-from airflow import DAG, Dataset
+from airflow import DAG
 from airflow.decorators import task
 from datetime import datetime
 from airflow.sensors.external_task import ExternalTaskSensor

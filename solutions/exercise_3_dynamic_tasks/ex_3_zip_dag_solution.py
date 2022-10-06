@@ -59,5 +59,5 @@ with DAG(
         f.write(f"On {old_file_name} {file_content}")
         f.close()
 
-    write_new_files.partial().expand(args=zipped_arguments)
+    write_new_files.expand(args=zipped_arguments)
 

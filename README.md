@@ -58,4 +58,4 @@ In `dags/exercise_4_dynamic_tasks` there is a DAG which is creating several yml 
 
 > Task: Use dynamic task mapping over the S3CopyObjectOperator to sort the files by filetype into a "yml bucket" and a "txt bucket". The goal is to have one dynamically mapped task combination of `source_bucket_key` and `dest_bucket_key`.
 
-Hint: Use the new `map` function to help you sort the files. A very similar use case can be found in the "Transforming mapped data" section of the offical documentation.
+Hint: Write a function to use with `map` to help you sort the files. A very similar use case can be found in the "Transforming mapped data" section of the offical documentation.

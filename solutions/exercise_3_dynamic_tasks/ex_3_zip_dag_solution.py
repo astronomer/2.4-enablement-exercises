@@ -56,7 +56,7 @@ with DAG(
         new_file_name=protagonist + "_" + old_file_name
 
         f = open(f"include/ex_3/solutions/{new_file_name}", "w")
-        f.write(f"On {old_file_name} {file_content}")
+        f.write(f"On {old_file_name[:-4]} {file_content}")
         f.close()
 
     write_new_files.expand(args=zipped_arguments)

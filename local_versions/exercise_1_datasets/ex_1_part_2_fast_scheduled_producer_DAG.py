@@ -20,7 +20,7 @@ with DAG(
 
     @task
     def create_object_locally(random_number):
-        f = open("include/ex_1/random_number.txt", "a")
+        f = open("include/ex_1/random_number.txt", "w")
         f.write(f"{random_number}")
         f.close()
 

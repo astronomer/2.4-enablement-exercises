@@ -22,8 +22,8 @@ with DAG(
     txt_keys = []
     yml_keys = []
     for i in range(10):
-        txt_keys.append(f"s3://{S3_BUCKET}/{i}.txt")
-        yml_keys.append(f"s3://{S3_BUCKET}/{i}.yml")
+        txt_keys.append(f"s3://{S3_BUCKET}/ex4/{i}.txt")
+        yml_keys.append(f"s3://{S3_BUCKET}/ex4/{i}.yml")
 
     # dynamically map this task create 10 text files in the S3 bucket
     create_txt_files_in_S3 = S3CreateObjectOperator(

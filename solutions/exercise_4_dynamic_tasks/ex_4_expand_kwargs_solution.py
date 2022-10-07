@@ -20,8 +20,8 @@ with DAG(
     txt_keys = []
     yml_keys = []
     for i in range(10):
-        txt_keys.append(f"s3://{S3_BUCKET}/{i}.txt")
-        yml_keys.append(f"s3://{S3_BUCKET}/{i}.yml")
+        txt_keys.append(f"s3://{S3_BUCKET}/ex4/{i}.txt")
+        yml_keys.append(f"s3://{S3_BUCKET}/ex4/{i}.yml")
 
     create_txt_files_in_S3 = S3CreateObjectOperator.partial(
         task_id="create_txt_files_in_S3",
@@ -47,12 +47,12 @@ with DAG(
     def create_copy_kwargs(filename):
         if filename.rsplit(".", 1)[-1] == "txt":
             return {
-                "source_bucket_key": f"s3://{S3_BUCKET}/{filename}",
+                "source_bucket_key": f"s3://{S3_BUCKET}/ex4/{filename}",
                 "dest_bucket_key": f"s3://{S3_BUCKET_TXT}/{filename}"
             }
         elif filename.rsplit(".", 1)[-1] == "yml":
             return {
-                "source_bucket_key": f"s3://{S3_BUCKET}/{filename}",
+                "source_bucket_key": f"s3://{S3_BUCKET}/ex4/{filename}",
                 "dest_bucket_key": f"s3://{S3_BUCKET_YML}/{filename}"
             }
         else:

@@ -25,7 +25,8 @@ with DAG(
     list_files_ingest_bucket = S3ListOperator(
         task_id="list_files_ingest_bucket",
         aws_conn_id="aws_conn",
-        bucket=S3_BUCKET
+        bucket=S3_BUCKET,
+        prefix="ex1/"
     )
 
     @task

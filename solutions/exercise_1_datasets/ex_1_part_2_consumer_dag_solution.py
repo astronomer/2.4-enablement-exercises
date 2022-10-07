@@ -11,8 +11,8 @@ S3_BUCKET = "myexamplebucketone"
 
 API = "http://numbersapi.com/"
 
-age_estimate_dataset = Dataset(f"s3://{S3_BUCKET}/age_estimate.txt")
-random_number_dataset = Dataset(f"s3://{S3_BUCKET}/random_number.txt")
+age_estimate_dataset = Dataset(f"s3://{S3_BUCKET}/ex1/age_estimate.txt")
+random_number_dataset = Dataset(f"s3://{S3_BUCKET}/ex1/random_number.txt")
 
 with DAG(
     dag_id="ex_1_part_2_consumer_dag_solution",
@@ -25,7 +25,8 @@ with DAG(
     list_files_ingest_bucket = S3ListOperator(
         task_id="list_files_ingest_bucket",
         aws_conn_id="aws_conn",
-        bucket=S3_BUCKET
+        bucket=S3_BUCKET,
+        prefix="ex1/"
     )
 
     @task

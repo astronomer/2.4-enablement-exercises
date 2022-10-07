@@ -20,7 +20,7 @@ with DAG(
     def get_my_estimated_age():
         s3_hook = S3Hook(aws_conn_id='aws_conn')
         file_content = s3_hook.read_key(
-                key="age_estimate.txt",
+                key="ex1/age_estimate.txt",
                 bucket_name=S3_BUCKET
         )
         return int(file_content[1:-1])
